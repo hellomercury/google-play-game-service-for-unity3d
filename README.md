@@ -1,7 +1,5 @@
 ## google-play-game-service-for-unity3d
 Google Play Service For Unity  is a Unity Plugin For Google Service.Include Google Admob Unity,Google Game API Unity. Login,Achievement,Leaderboard,Event,Quest,Snapshot,RealTimePlayGame,TurnbasedPlayGame API are supported and easy to use with c# or js.    
-The  plugin if rewritten of 
-[https://github.com/unity-plugins/google-services-unity](https://github.com/unity-plugins/google-services-unity)
 
 
 
