@@ -17,8 +17,6 @@ namespace com.google.game
 			listener.onGameEvent(eventName,eventData);
          }
         
-		override public string toString(){
-			return "IRealTimeMessageListenerProxy";
-		}
+	
 	}
 }

@@ -20,8 +20,6 @@ namespace com.google.game
          	if(listener!=null)
 			listener.onGetSnapshotData(snapshotMeta,snapshotData);
          }
-        override public string toString(){
-			return "IGoogleGameListenerProxy";
-		}
+
 	}
 }

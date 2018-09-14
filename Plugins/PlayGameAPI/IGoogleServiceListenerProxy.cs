@@ -17,8 +17,6 @@ namespace com.google.game
 			listener.onServiceEvent(eventName,eventData);
          }
         
-		override public string toString(){
-			return "IGoogleServiceListenerProxy";
-		}
+
 	}
 }
