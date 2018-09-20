@@ -23,6 +23,20 @@
         public static readonly int REAL_TIME_CONNECTION_FAILED = 7000;
         public static readonly int REAL_TIME_MESSAGE_SEND_FAILED = 7001;
         public static readonly int REAL_TIME_ROOM_NOT_JOINED = 7004;
+        
+        
+         public static readonly int MATCH_STATUS_AUTO_MATCHING = 0;
+	    public static readonly int MATCH_STATUS_ACTIVE = 1;
+	    public static readonly int MATCH_STATUS_COMPLETE = 2;
+	    public static readonly int MATCH_STATUS_EXPIRED = 3;
+	    public static readonly int MATCH_STATUS_CANCELED = 4;
+	    public static readonly int MATCH_TURN_STATUS_INVITED = 0;
+	    public static readonly int MATCH_TURN_STATUS_MY_TURN = 1;
+	    public static readonly int MATCH_TURN_STATUS_THEIR_TURN = 2;
+	    public static readonly int MATCH_TURN_STATUS_COMPLETE = 3;
+	    
+	    public static readonly int SORT_ORDER_MOST_RECENT_FIRST=0;
+	    public static readonly int SORT_ORDER_SOCIAL_AGGREGATION=1;
 
     }
 }

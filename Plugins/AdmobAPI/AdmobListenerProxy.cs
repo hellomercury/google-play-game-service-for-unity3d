@@ -15,9 +15,7 @@ namespace admob
              if(listener!=null)
          	 listener.onAdmobEvent(adtype,eventName,paramString);
          }
-        override public string toString(){
-			return "AdmobListenerProxy";
-		}
+       
 	}
 }
 #endif

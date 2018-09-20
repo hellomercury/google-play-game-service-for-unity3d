@@ -23,6 +23,7 @@ namespace com.google.game
         }
 //#if UNITY_ANDROID
 #if UNITY_EDITOR
+
         private void preInitGame()
 		{
 		}
@@ -43,6 +44,12 @@ namespace com.google.game
         {
             
         }
+
+        public void showInvitationInbox()
+        {
+
+        }
+
         public void unlockAchievement(string achievementId)
         {
             
@@ -129,7 +136,7 @@ namespace com.google.game
             
         }
 
-        public void showRTInvitePanel(int minAutoMatchPlayers, int maxAutoMatchPlayers, long exclusiveBitMask,bool allowAutomatch)
+        public void showSelectRTOpponentsBox(int minAutoMatchPlayers, int maxAutoMatchPlayers, long exclusiveBitMask,bool allowAutomatch)
         {
             
         }
@@ -157,10 +164,7 @@ namespace com.google.game
         {
            
         }
-        public void showInvitationInbox()
-        {
-           
-        }
+       
         public void loadRTInvitations()
         {
            
@@ -237,6 +241,10 @@ namespace com.google.game
         {
            
         }
+        public void showTurnbasedInvitationInbox()
+        {
+           
+        }
         public void incrementEvent(string eventId, int incrementAmount)
         {
            
@@ -253,6 +261,7 @@ namespace com.google.game
         {
            
         }
+
 
 #elif UNITY_ANDROID
 //#elif UNITY_EDITOR
@@ -283,10 +292,16 @@ namespace com.google.game
         {
             jgame.Call("loadPlayerInfo");
         }
-        public void getActivationHint(string type)
+        public void getActivationHint()
         {
-            jgame.Call("getActivationHint",new object[] { type });
+            jgame.Call("getActivationHint");
         }
+
+        public void showInvitationInbox()
+        {
+            jgame.Call("showInvitationInbox");
+        }
+
         public void unlockAchievement(string achievementId)
         {
             jgame.Call("unlockAchievement", new object[] { achievementId });
@@ -373,9 +388,9 @@ namespace com.google.game
             jgame.Call("getSnapshotContent", new object[] { uniqueName });
         }
 
-        public void showRTInvitePanel(int minAutoMatchPlayers, int maxAutoMatchPlayers, long exclusiveBitMask,bool allowAutomatch)
+        public void showSelectRTOpponentsBox(int minAutoMatchPlayers, int maxAutoMatchPlayers, long exclusiveBitMask,bool allowAutomatch)
         {
-            jgame.Call("showRTInvitePanel", new object[] { minAutoMatchPlayers, maxAutoMatchPlayers, exclusiveBitMask , allowAutomatch });
+            jgame.Call("showSelectRTOpponentsBox", new object[] { minAutoMatchPlayers, maxAutoMatchPlayers, exclusiveBitMask , allowAutomatch });
         }
         public void createRTGameRoom(int minAutoMatchPlayers, int maxAutoMatchPlayers, long exclusiveBitMask, string[] invitees)
         {
@@ -401,10 +416,7 @@ namespace com.google.game
         {
             jgame.Call("declineRTInvitation", new object[] { invitationId });
         }
-        public void showInvitationInbox()
-        {
-            jgame.Call("showInvitationInbox");
-        }
+       
         public void loadRTInvitations()
         {
             jgame.Call("loadRTInvitations");
@@ -468,6 +480,9 @@ namespace com.google.game
         public void takeTurn(string matchId, byte[] matchData, string pendingParticipantId)
         {
             jgame.Call("takeTurn", new object[] { matchId,matchData,pendingParticipantId });
+        }
+        public void showTurnbasedInvitationInbox(){
+        jgame.Call("showTurnbasedInvitationBox", new object[] { });
         }
         public void acceptTurnBasedInvitation(string invitationId)
         {

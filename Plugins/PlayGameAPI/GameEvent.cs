@@ -19,11 +19,10 @@ namespace com.google.game
         public static readonly string onGetSnapshotFail = "onGetSnapshotFail";
         public static readonly string onDeleteSnapshotResult = "onDeleteSnapshotResult";
 
-        public static readonly string onShowRTIntiveResult = "onShowRTIntiveResult";
-
-        public static readonly string onRTRoomWaitingResult = "onRTRoomWaitingResult";
-        public static readonly string onReliableMessageSentResult = "onReliableMessageSentResult";
-        public static readonly string onUnreliableMessageSentResult = "onUnreliableMessageSentResult";
+       // public static readonly string onShowRTIntiveResult = "onShowRTIntiveResult";
+       // public static readonly string onRTRoomWaitingResult = "onRTRoomWaitingResult";
+       // public static readonly string onReliableMessageSentResult = "onReliableMessageSentResult";
+      //  public static readonly string onUnreliableMessageSentResult = "onUnreliableMessageSentResult";
 
 
 
@@ -45,10 +44,12 @@ namespace com.google.game
         public static readonly string onLoadTurnbasedMatchesResult = "onLoadTurnbasedMatchesResult";
         public static readonly string onRematchTurnBasedResult = "onRematchTurnBasedResult";
         public static readonly string onTakeTurnResult = "onTakeTurnResult";
+        public static readonly string onShowTurnbasedInvitationInboxResult = "onShowTurnbasedInvitationInboxResult";
+        
 
         public static readonly string onGetActivationHintResult = "onGetActivationHintResult";
-        public static readonly string onShowInvitationBoxResult = "onShowInvitationBoxResult";
-        public static readonly string onLoadRTInvitationsResult = "onLoadRTInvitationsResult";
+        //public static readonly string onShowInvitationBoxResult = "onShowInvitationBoxResult";
+        //public static readonly string onLoadRTInvitationsResult = "onLoadRTInvitationsResult";
 
         public static readonly string onLoadEventResult = "onLoadEventResult";
         public static readonly string onLoadStatsResult = "onLoadStatsResult";
