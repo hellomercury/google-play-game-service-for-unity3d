@@ -151,7 +151,7 @@ public class playgamedemo : MonoBehaviour {
         if (GUI.Button(new Rect(240, 320, 100, 60), "Invite"))
         {
            
-            game.showRTInvitePanel(2,2,0,true);
+            game.showSelectRTOpponentsBox(2,2,0,true);
         }
         if (GUI.Button(new Rect(360, 320, 100, 60), "Invitation"))
         {

@@ -44,3 +44,4 @@ Steps to integate plugin into unity game
 
 
 The documentation will be improved in the future.
+![ScreenShot](https://github.com/unity-plugins/google-play-game-service-for-unity3d/blob/master/document/screen.jpg)
