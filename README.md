@@ -1,13 +1,13 @@
 ## google-play-game-service-for-unity3d
-Google Play Service For Unity  is a Unity Plugin For Google Service.Include Google Admob Unity,Google Game API Unity. Login,Achievement,Leaderboard,Event,Quest,Snapshot,RealTimePlayGame,TurnbasedPlayGame API are supported and easy to use with c# or js.    
+Google Play Service For Unity  is a Unity Plugin For Google Service.Include Google Admob Unity,Google Game API Unity.Google Firebase Unity     Login,Achievement,Leaderboard,Event,Quest,Snapshot,RealTimePlayGame,TurnbasedPlayGame API are supported and easy to use with c# or js.    
 
 
 
 ### Get Started with Google Services for Unity
-This guide is intended for publishers who want to integrate the Google Admob ,Google Play Game Service  into a Unity app.    
+This guide is intended for publishers who want to integrate the Google Admob ,Google Play Game Service,Firebase Analysis  into a Unity app.    
   
 - playgamedemo.cs is example code of usage     
-- This plugin required android sdk build tool 26     
+- This plugin was tested with android sdk build tool 26     
 - This plugin was tested with unity Unity 2018.2    
 - LitJson is optional
 - This plugin support android only    
@@ -43,5 +43,11 @@ Steps to integate plugin into unity game
 - [Players States in Unity Games](https://github.com/unity-plugins/google-play-game-service-for-unity3d/wiki/Players-States-in-Unity-Games)
 
 
-The documentation will be improved in the future.
+### Google Firebase Core
+Google Analytics for Firebase,Google Analytics for Firebase is a free app measurement solution that provides insight on app usage and user engagement.
+This plugin make it easy to use analytics in unity3d game.    
+[Google Firebase Analytics in unity3d game](https://github.com/unity-plugins/google-play-game-service-for-unity3d/wiki/Google-Analytics-for-Firebase-Core)
+
+
+    
 ![ScreenShot](https://github.com/unity-plugins/google-play-game-service-for-unity3d/blob/master/document/screen.jpg)

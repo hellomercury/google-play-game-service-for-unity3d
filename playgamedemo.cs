@@ -5,7 +5,8 @@ using System.Collections;
 using admob;
 public class playgamedemo : MonoBehaviour {
 
-	// Use this for initialization
+    // Use this for initialization
+    string appID;
 	string bannerID="";
 	string interstitialID="";
 	string videoID="";
@@ -14,21 +15,22 @@ public class playgamedemo : MonoBehaviour {
 	void Start () {
         Debug.Log("start unity demo-------------");
 #if UNITY_IOS
-        		 //appID="ca-app-pub-3940256099942544~1458002511";
+        		 appID="ca-app-pub-3940256099942544~1458002511";
 				 bannerID="ca-app-pub-3940256099942544/2934735716";
 				 interstitialID="ca-app-pub-3940256099942544/4411468910";
 				 videoID="ca-app-pub-3940256099942544/1712485313";
 #elif UNITY_ANDROID
-        		 //appID="ca-app-pub-3940256099942544~3347511713";
+        		 appID="ca-app-pub-3940256099942544~3347511713";
 				 bannerID="ca-app-pub-3940256099942544/6300978111";
 				 interstitialID="ca-app-pub-3940256099942544/1033173712";
 				 videoID="ca-app-pub-3940256099942544/5224354917";
 #endif
         googleService = GoogleServce.Instance();
         googleService.googleEventHandler += onGoogleEvent;
-        Admob.Instance().initAdmob(bannerID, interstitialID);
+        Admob.Instance().initSDK(appID, null);
         Admob.Instance().rewardedVideoEventHandler += onRewardedVideoEvent;
 
+        FirebaseAnalytic.Instance().logEvent("appstart", "{\"name\":\"joe\"}");//the second param must been json string
     }
 	
 	// Update is called once per frame
@@ -50,7 +52,7 @@ public class playgamedemo : MonoBehaviour {
     void OnGUI(){
         if (GUI.Button(new Rect(240, 480, 100, 60), "admobbanner"))
         {
-            Admob.Instance().showBannerRelative(AdSize.Banner, AdPosition.BOTTOM_CENTER, 30, "defaultBanner");
+            Admob.Instance().showBannerRelative(bannerID,AdSize.BANNER, AdPosition.BOTTOM_CENTER, 30, "defaultBanner");
         }
         if (GUI.Button(new Rect(360, 480, 100, 60), "admobInstitial"))
         {
@@ -60,7 +62,7 @@ public class playgamedemo : MonoBehaviour {
             }
             else
             {
-                Admob.Instance().loadInterstitial();
+                Admob.Instance().loadInterstitial(interstitialID);
             }
         }
         if (GUI.Button(new Rect(0, 580, 100, 60), "admobVideo"))
